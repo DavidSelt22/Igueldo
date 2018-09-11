@@ -88,6 +88,55 @@
            $("#button-menu").click(function(){ $(".menu-despleg").toggleClass('menu-visible') });
 
 
- 
+          $("#i").click(function () {
+   
+            $('html,body').animate({
+            scrollTop: $(".hotel").offset().top
+             }, 2000);
+          });
+          $("#t").click(function () {
+   
+            $('html,body').animate({
+            scrollTop: $(".h3").offset().top
+             }, 2000);
+          });
+          $("#e").click(function () {
+   
+            $('html,body').animate({
+            scrollTop: $(".h3").offset().top
+             }, 2000);
+          });
+          $("#h").click(function () {
+   
+            $('html,body').animate({
+            scrollTop: $(".h3").offset().top
+             }, 2000);
+          });
+          $("#ha").click(function () {
+   
+            $('html,body').animate({
+            scrollTop: $(".adornocentral").offset().top
+             }, 2000);
+          });
+          $("#u").click(function () {
+   
+            $('html,body').animate({
+            scrollTop: $(".contacto").offset().top
+             }, 2000);
+          });
+          $("#c").click(function () {
+   
+            $('html,body').animate({
+            scrollTop: $(".contacto").offset().top
+             }, 2000);
+          });
+
+
+
+
+
+
+
+
 
  });

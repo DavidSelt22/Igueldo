@@ -166,7 +166,7 @@ header label,.header label{
 	justify-content: flex-end;
 }
 
-.intmenu a,.menu-separado a{
+.intmenu .a,.menu-separado .a{
     font: 16px Champagne;
 	text-decoration: none;
 	color: #fff;
@@ -177,14 +177,15 @@ header label,.header label{
     /*margin-right:5%; 
     margin-left:3%;*/
     transition: all .7s;
+    cursor: pointer;
   
 }
-.menu-separado a{
+.menu-separado .a{
     margin: 0% 3%;
     transition: border .5s;
 	
 }
-.intmenu a:hover,.menu-separado a:hover{
+.intmenu .a:hover,.menu-separado .a:hover{
 	color:#e1ddc4;
 	transition:all .7s;
 }
@@ -262,7 +263,7 @@ header label,.header label{
    /* border:1px solid #333;*/
 	text-align: center;
 }
-.menu2 .intmenud a{
+.menu2 .intmenud .a{
 	width: 100%;
 	color: #fff;
 	font: 20px Champagne;

@@ -1,0 +1,480 @@
+@font-face {
+    font-family: "Champagne";
+    src: url(../fonts/Champagne-Limousines-Bold-Italic.ttf) format("truetype");
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	margin-top: 180px;
+}
+@media(max-width: 768px){
+	body{
+	margin-top: 200px;}
+}
+@media(max-width:414px){
+	body{
+	margin-top: 200px;
+}
+}
+.header-top{
+	width:100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:1000;
+	background-color: #ffff;
+	transition: all .7s;
+
+}
+
+.flowerleft,.flowerrigth,.logocenter{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: flex-start;
+	/*border: 2px solid red;*/
+	overflow: hidden;
+	padding: 0;
+}
+.flowerrigth{	
+	justify-content: flex-end;
+}
+.logocenter{justify-content:center;}
+
+.fl,.fr,.lc{
+	width: 250px;
+	height: 150px;
+	background-image: url("../img/adorno floral.png");
+	background-size: contain;
+	background-repeat:no-repeat;
+	background-position: center;
+	transition: all .7s;
+}
+
+.fr{
+	background-image: url("../img/adorno-floral2.png");
+	
+}
+
+.lc{
+    width: 400px;
+	height: 150px;
+	background-image: url("../img/Logo.png");
+}
+/*-----------------------Menu----------------------*/
+header{
+	width: 100%;
+	box-sizing: border-box;
+	/*border:2px solid #666;*/
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed;
+	top: 150px;
+	left: 0;
+	z-index:1000;
+	transition: height .5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: all .7s;
+
+}
+/*--------------------------*/
+.menu-visible {
+  transform: translateX(0) !important;
+  transition: all .3s ease;
+  position: absolute;
+  position: fixed; 
+
+}
+/*-------------------------*/
+.header{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	background-color: #818375;
+	margin-top: 1%;
+}
+.header label{
+	    height: 47px;
+        width: 47px;
+        background-image: url("../img/menu.png");
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+}
+header label{
+		float: right;
+		font-size: 29px;
+		margin-top:35px;
+		margin-right: 20px;
+		cursor: pointer;
+		color: #000;
+        -moz-transition: font-size .5s, margin-top .5s;
+        -webkit-transition: font-size .5s, margin-top .5s;
+        -ms-transition: font-size .5s, margin-top .5s;
+        -o-transition: font-size .5s, margin-top .5s;
+        /*border: 2px solid #fff;*/
+        height: 47px;
+        width: 47px;
+        background-image: url("../img/menu.png");
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+	}
+
+header label,.header label{
+	display: none;
+}
+
+.menu{
+
+	width:100%;
+	/*border:2px solid green;*/
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #818375;
+    justify-content: space-between;
+
+}
+.intmenu,.menu-separado{
+	width:60%;
+	box-sizing:border-box;
+	/*border:2px solid red;*/
+/*	margin-top:30px;*/
+    /*padding:2px;*/
+	transition: margin-top .5s; 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	padding-right: 20px;
+}
+.menu-separado{
+	width: 23%;
+	justify-content: flex-end;
+}
+
+.intmenu a,.menu-separado a{
+    font: 16px Champagne;
+	text-decoration: none;
+	color: #fff;
+	padding:15px 5px;
+	box-sizing:border-box;
+	/*border:2px solid blue;*/
+	transition: border .5s;
+    /*margin-right:5%; 
+    margin-left:3%;*/
+    transition: all .7s;
+  
+}
+.menu-separado a{
+    margin: 0% 3%;
+    transition: border .5s;
+	
+}
+.intmenu a:hover,.menu-separado a:hover{
+	color:#e1ddc4;
+	transition:all .7s;
+}
+.sepmenu{
+	width: 10px;
+	height: 20px;
+	background-image: url("../img/sepmenu.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+@media(min-width: 1023px){
+
+}
+@media(min-width: 1366px){
+	#logotipo{
+		/*background: url("../img/fondologo1024.png");*/
+		background-size:90%;
+		/*border: 2px solid #666;*/
+	}
+}
+
+
+@media(max-width: 1023px){
+  .intmenu{ display:none;}/*apagamos el menu original*/
+}
+
+@media(max-width: 768px){
+	.menu{display: none;}
+}
+
+/*===================Menu desplegable===================*/
+
+.menu-despleg{
+
+		/*box-sizing: border-box;*/
+		position: absolute;
+		/*right:0px;*/
+		top:160px;
+		width:100%;
+		/*transition: all 0.3s;*/
+        /*transition:translateX(-100%) .5s;*/ 
+		transform: translateX(-102%);
+	    background-color: rgba(129,131,117,.9);
+	    position: fixed;
+        z-index:1000;
+        transition: all .7s ease;
+
+    
+	}
+@media(max-width: 768px){
+	.menu-despleg{top:210px}
+	.menu-separado{display: none;}
+	.menu{justify-content: center;width: 100%;}
+	.intmenu{width: 100%;}
+	header label{width: 90%;margin-left: 3%;margin-top: 1%;}
+}
+@media(max-width: 414px){
+	.menu-despleg{top:200px}
+	.menu-separado{display: none;}
+	header label{width: 100%;margin-left: 5%;margin-top: 1%;}
+
+}
+
+@media(max-width: 360px){
+	.menu-despleg,.menu-visible{top:200px;}
+}	
+
+.menu2{
+	margin: auto;
+	width: 90%;
+   /* border:1px solid #333;*/
+	text-align: center;
+}
+.menu2 .intmenud a{
+	width: 100%;
+	color: #fff;
+	font: 20px Champagne;
+	display: block;
+	text-decoration:none;
+	padding: 24px;
+	transition: all .5s;
+	text-align: center;
+	box-sizing: border-box;
+
+
+
+}
+
+
+
+@media(max-width: 1023px){
+	.menu-despleg{
+	display: table;
+}
+
+header label,.header label{
+	display: table;
+
+ }
+
+
+}
+
+/*--------El Hotel-----------------------*/
+.hotel{
+	/*border:2px solid #333;*/
+	margin-top: 3%;
+}
+
+.h1,.h2,.h3{
+	padding: 15px;
+	/*border:2px solid #333;*/
+}
+.h1imag,.h2imag,.h3imag{
+	height: 300px;
+	background-image: url("../img/4.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h2imag{background-image: url("../img/2.jpg");}
+.h3imag{background-image: url("../img/5.jpg");}
+
+.descripcion{
+
+   
+
+}
+.descriptint{
+	 background-color: #818375;
+	 height:  230px;
+	 padding: 3px 10px;
+	 margin-bottom: 3%;
+	
+}
+
+.descripcion h1{
+	width: 100%;
+	font: 23px Champagne;
+	color:#e1ddc4;
+	/*border: 2px solid red;*/
+	padding-left: 5%;
+
+}
+.descripcion p{
+	width: 90%;
+	font: 18px Champagne;
+	color:#fff;
+	/*border: 2px solid red;*/
+	margin:auto;
+	padding: 0px;
+	line-height: 180%;
+}
+
+.adornocentral{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.imagadorno{
+	width: 500px;
+	height:200px;
+	background-image: url("../img/adorno 2.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@media(max-width: 768px){
+	.descriptint{
+		 height:  150px;
+	}
+}
+@media(max-width: 414px){
+	.descriptint{
+		 height:  240px;
+	}
+}
+@media(max-width: 375px){
+	.descriptint{
+		 height:  260px;
+	}
+}
+/*------------------HABITACIONES------------------*/
+.habitaciones{
+	/*padding: 0px 5px;*/
+}
+.tithabit{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	background-color: #818375;
+	
+}
+.tithabit h1{
+	font: 20px Champagne;
+	color:#ffff;
+	margin: 0px;
+	padding:10px 0px;
+	/*border: 2px solid #fff;*/
+}
+.habitrigth,.habitleft{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.habitleft{
+	justify-content: flex-end;
+}
+.habitrigth h1,.habitleft h1{
+	background-color: #e6e7eb;
+	width: 100%;
+	font: 20px Champagne;
+	color:#818375;
+	padding: 10px 25px;
+	text-align: right;
+
+}
+.habitleft h1{
+	text-align: left;
+}
+.habitrigth p,.habitleft p{
+	width: 80%;
+	height: 90px;
+	font: 18px Champagne;
+	color:#333;
+	padding: 0px 15px;
+}
+.habitleft p{
+	text-align: right;
+}
+
+/*--------------------------LOGO BLanco-----------------------*/
+.logoblanco{
+	width: 100%;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center; 
+	background-color: #818375;
+}
+
+.imagblanco{
+	width: 400px;
+	height: 150px;
+	background-image: url("../img/Logoblanco.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*-----------------MAPA-------------------------*/
+.contacto{
+	/*border: 2px solid #333;*/
+	margin:20px 0px;
+}
+.mapa{
+	/*border: 2px solid #333;*/
+	border-right: 5px solid #818375;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+
+}
+
+.detallecont{
+	height: 300px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-end;
+	align-content: flex-end;
+	/*border: 2px solid #333;*/
+}
+.detallecont h1{
+	font: 22px Champagne;
+	color:#818375;
+}
+.detallecont p{
+	font: 18px Champagne;
+	color:#818375;
+	line-height: 30px;
+	margin: 0px;
+	padding: 0px;
+}
